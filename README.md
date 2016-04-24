@@ -6,7 +6,7 @@ I honestly could not be bothered with fixing prong, so I decided to just
 completely create a new version of it with new features to be added.
 </p>
 
-<title><b> Features </b> </title>
+<b><title>Features </title></b>
 <ol type="1">
   <li> Play against AI </li>
   <li> Practice Mode </li>
