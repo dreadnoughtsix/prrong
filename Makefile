@@ -1,5 +1,7 @@
 JAVAC=javac
 COMPF=-g
+sources = $(wildcard *.java)
+classes = $(sources:.java=.class)
 
 all: $(classes)
 
