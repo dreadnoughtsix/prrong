@@ -19,6 +19,7 @@ public class GUI extends JFrame {
 
     Paddle playerOne = new Paddle(5, 10);
     Paddle playerTwo = new Paddle(WIDTH - (Paddle.PADDLE_WIDTH + 5), 10);
+    Graphics g = new Graphics();
 
     GUI() {
         this.setTitle("PONG");
@@ -28,9 +29,6 @@ public class GUI extends JFrame {
         this.setSize(width - 400, height - 200);
         this.setLocationRelativeTo(null);
         this.setBackground(Color.BLACK);
-    }
-
-    public void paint(Graphics g) {
         playerOne.drawPaddle(g);
         playerTwo.drawPaddle(g);
     }
