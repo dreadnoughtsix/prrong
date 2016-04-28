@@ -5,21 +5,29 @@
  */
 
 import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
 
 public class Paddle {
 
-    public static final int PADDLE_WIDTH = 10, PADDLE_HEIGHT = GUI.HEIGHT/12;
-    private Rectangle paddle = new Rectangle(PADDLE_WIDTH, PADDLE_HEIGHT);
-    int x, y;
+    public static final int WIDTH = 10, HEIGHT = GUI.HEIGHT/15;
+    private Rectangle paddle = new Rectangle(WIDTH, HEIGHT);
+    int x, y, player;
 
-    public Paddle(int xPos, int yPos) {
 
-        x = xPos;
-        y = yPos;
+    public Paddle(int xPos, int yPos, int player_num) {
+
+        this.x = xPos;
+        this.y = yPos;
+        this.player = player;
     }
 
-    public void drawPaddle(Graphics g) {
+    public Rectangle drawPaddle(Graphics g, int yVel) {
+        Rectangle r = new Rectangle(this.x, this.y, WIDTH, HEIGHT);
         g.setColor(Color.WHITE);
-        g.fillRect(x, y, PADDLE_WIDTH, PADDLE_HEIGHT);
+        g.fillRect(this.x, this.y + yVel, WIDTH, HEIGHT);
+
+        return r;
     }
+
 }

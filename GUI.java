@@ -10,27 +10,31 @@ import javax.swing.*;
 public class GUI extends JFrame {
 
     private static final long serialVersionUID = 1L;
-    public static Toolkit tk = Toolkit.getDefaultToolkit();
-    public static Dimension d = tk.getScreenSize();
-    public static int width = (int) d.getWidth();
-    public static int height = (int) d.getHeight();
+    
+    public static final Toolkit tk = Toolkit.getDefaultToolkit();
+    public static final Dimension screenDim = tk.getScreenSize();
+    private static final int width = (int) screenDim.getWidth();
+    private static final int height = (int) screenDim.getHeight();
+
     public static final int WIDTH = width - 400, HEIGHT = height - 200;
+    public static final Dimension gameDim = new Dimension(WIDTH, HEIGHT);
 
+    protected int padWidth = Paddle.WIDTH;
+    protected int padHeight = Paddle.HEIGHT;
 
-    Paddle playerOne = new Paddle(5, 10);
-    Paddle playerTwo = new Paddle(WIDTH - (Paddle.PADDLE_WIDTH + 5), 10);
-    Graphics g = new Graphics();
+    GameBoard gameBoard = new GameBoard();
 
     GUI() {
+        // Create main frame
         this.setTitle("PONG");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(true);
         this.setResizable(false);
-        this.setSize(width - 400, height - 200);
-        this.setLocationRelativeTo(null);
-        this.setBackground(Color.BLACK);
-        playerOne.drawPaddle(g);
-        playerTwo.drawPaddle(g);
-    }
+        this.setPreferredSize(gameDim);
+        this.pack();
+        this.setLocation((screenDim.width-gameDim.width)/2, 
+                (screenDim.height-gameDim.height)/2);
+        this.setVisible(true);
 
+        this.add(gameBoard);
+    }
 }

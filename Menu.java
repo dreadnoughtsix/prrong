@@ -7,7 +7,14 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class Menu extends JFrame {
+public class Menu {
 
-    private static final long serialVersionUID = 1L;
+    public void drawMenu(Graphics g) {
+        
+        Font font = new Font("arial", Font.BOLD, 45);
+        g.setFont(font);
+        g.setColor(Color.WHITE);
+        g.drawString("Welcome", GUI.WIDTH/2, GUI.HEIGHT/2);
+    
+    }
 }
