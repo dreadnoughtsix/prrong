@@ -14,7 +14,6 @@ public class Menu {
         Font font = new Font("arial", Font.BOLD, 45);
         g.setFont(font);
         g.setColor(Color.WHITE);
-        g.drawString("Welcome", GUI.WIDTH/2, GUI.HEIGHT/2);
     
     }
 }

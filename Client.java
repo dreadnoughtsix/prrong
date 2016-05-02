@@ -6,6 +6,8 @@
 
 public class Client {
     public static void main(String[] args) {
-        new GUI();
+        Game game = new Game();
+        game.gameframe.add(game);
+        
     }
 }
