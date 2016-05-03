@@ -4,27 +4,28 @@
  * @author dreadnoughtsix
  */
 
-import java.awt.*;
-import javax.swing.*;
-import java.awt.event.*;
+import java.awt.Canvas;
 
-public class Game extends Canvas implements Runnable{
+public class Game extends Canvas implements Runnable {
 
     private static final long serialVersionUID = 1L;
-    public static final Toolkit tk = Toolkit.getDefaultToolkit();
-    public static final Dimension screenDim = tk.getScreenSize();
 
     private boolean running = false;
     private Thread thread;
     public static GameFrame gameframe = new GameFrame();
 
+    Game() {
+        setPreferredSize(GameFrame.gameDim);
+    }
 
+    // Game loop starts here
     public synchronized void start() {
         running = true;
         thread = new Thread(this, "Game");
         thread.start();
     }
     
+    // Stops game loop when necessary
     public synchronized void stop() {
         running = false;
         try {
@@ -34,11 +35,9 @@ public class Game extends Canvas implements Runnable{
         }
     }
 
+    // Runnable method
     public void run() {
         while (running) {
-            System.out.println("Running...");
         }
     }
-
-
 }

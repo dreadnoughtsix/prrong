@@ -4,8 +4,10 @@
  * @author dreadnoughtsix
  */
 
-import java.awt.*;
-import javax.swing.*;
+import javax.swing.JFrame;
+import java.awt.Dimension;
+import java.awt.Color;
+import java.awt.Toolkit;
 
 public class GameFrame extends JFrame {
 
@@ -16,7 +18,7 @@ public class GameFrame extends JFrame {
 
     private static final int WIDTH = (int) screenDim.getWidth() - 300;
     private static final int HEIGHT = (int) screenDim.getHeight() - 200;
-    private static final Dimension gameDim = new Dimension(WIDTH, HEIGHT);
+    public static final Dimension gameDim = new Dimension(WIDTH, HEIGHT);
 
     GameFrame() {
         // Create main frame
@@ -29,5 +31,6 @@ public class GameFrame extends JFrame {
         this.setLocation((screenDim.width - gameDim.width)/2,
                 (screenDim.height - gameDim.height)/2);
         this.setVisible(true);
+        this.getContentPane().setBackground(Color.lightGray);
     }
 }
