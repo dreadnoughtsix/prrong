@@ -30,7 +30,7 @@ public class Game extends Canvas implements Runnable {
         running = false;
         try {
             thread.join();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -38,6 +38,16 @@ public class Game extends Canvas implements Runnable {
     // Runnable method
     public void run() {
         while (running) {
+            tick();
+            render();
         }
+    }
+
+    public void tick() {
+    
+    }
+
+    public void render() {
+    
     }
 }

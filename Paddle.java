@@ -8,6 +8,6 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class Paddle extends Rectangle {
+public class Paddle {
 
 }
