@@ -5,6 +5,7 @@
  */
 
 import java.awt.Canvas;
+import java.awt.image.BufferStrategy;
 
 public class Game extends Canvas implements Runnable {
 
@@ -20,6 +21,9 @@ public class Game extends Canvas implements Runnable {
 
     // Game loop starts here
     public synchronized void start() {
+        if (!running) {
+            return;
+        }
         running = true;
         thread = new Thread(this, "Game");
         thread.start();
@@ -27,12 +31,16 @@ public class Game extends Canvas implements Runnable {
     
     // Stops game loop when necessary
     public synchronized void stop() {
+        if (running) {
+            return;
+        }
         running = false;
         try {
             thread.join();
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.exit(1);
     }
 
     // Runnable method
@@ -40,6 +48,7 @@ public class Game extends Canvas implements Runnable {
         while (running) {
             tick();
             render();
+
         }
     }
 
@@ -48,6 +57,14 @@ public class Game extends Canvas implements Runnable {
     }
 
     public void render() {
+        // Get the buffer strategy of current canvas
+        BufferStrategy bs = getBufferStrategy();
+
+        // if the buffer strategy has not been created, create a new one
+        if (bs == null) {
+            createBufferStrategy(3);
+            return;
+        }
     
     }
 }

@@ -31,6 +31,6 @@ public class GameFrame extends JFrame {
         this.setLocation((screenDim.width - gameDim.width)/2,
                 (screenDim.height - gameDim.height)/2);
         this.setVisible(true);
-        this.getContentPane().setBackground(Color.lightGray);
+        this.getContentPane().setBackground(Color.BLACK);
     }
 }
