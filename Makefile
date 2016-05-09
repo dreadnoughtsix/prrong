@@ -11,3 +11,5 @@ clean:
 %.class : %.java
 	$(JAVAC) $(COMPF) $< 
 
+run:
+	java Client
