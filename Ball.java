@@ -8,7 +8,8 @@ import java.awt.Graphics;
 import java.awt.Dimension;
 import java.awt.Color;
 
-public class Ball {
+public class Ball extends GameObject {
+
     public int x, y;
     private Dimension ballDim = new Dimension(15, 15);
 

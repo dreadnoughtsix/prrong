@@ -7,13 +7,14 @@
 import java.awt.Graphics;
 import java.awt.Color;
 
-public class Paddle {
+public class Paddle extends GameObject { 
     
     public final int PADDLE_WIDTH = 10, PADDLE_HEIGHT = GameFrame.HEIGHT/10;
     private int x, y, player;
+    
+    Paddle(int id) {
 
-    Paddle(int player) {
-        this.player = player;
+        this.player = id;
 
         if (this.player == 1) {
             this.x = 0;
