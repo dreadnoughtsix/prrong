@@ -6,11 +6,14 @@
 
 public class GameObject {
 
-    public int x, y;
+    public int x, y, id;
 
-    GameObject(int x, int y) {
-        this.x = x;
-        this.y = y;
+    GameObject() {
+        this.x = this.y = 0;
+    }
+
+    GameObject(int id) {
+        this.id = id;
     }
 
     public void setX(int x) {
