@@ -15,8 +15,15 @@ public class Game extends Canvas implements Runnable {
     private Thread thread;
     public GameFrame gameframe = new GameFrame();
 
+    private Paddle p1, p2;
+    private Ball ball;
+
     Game() {
         setPreferredSize(GameFrame.gameDim);
+
+        p1 = new Paddle(1);
+        p2 = new Paddle(2);
+        ball = new Ball();
     }
 
     // Game loop starts here
