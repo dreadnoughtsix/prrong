@@ -13,7 +13,7 @@ public class Game extends Canvas implements Runnable {
 
     private boolean running = false;
     private Thread thread;
-    public static GameFrame gameframe = new GameFrame();
+    public GameFrame gameframe = new GameFrame();
 
     Game() {
         setPreferredSize(GameFrame.gameDim);
