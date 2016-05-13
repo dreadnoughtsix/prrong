@@ -21,7 +21,7 @@ public class Game extends Canvas implements Runnable {
 
     // Game loop starts here
     public synchronized void start() {
-        if (!running) {
+        if (running) {
             return;
         }
         running = true;
@@ -31,7 +31,7 @@ public class Game extends Canvas implements Runnable {
     
     // Stops game loop when necessary
     public synchronized void stop() {
-        if (running) {
+        if (!running) {
             return;
         }
         running = false;
@@ -48,7 +48,6 @@ public class Game extends Canvas implements Runnable {
         while (running) {
             tick();
             render();
-
         }
     }
 
