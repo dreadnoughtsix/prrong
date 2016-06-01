@@ -6,6 +6,8 @@
 
 import java.awt.Canvas;
 import java.awt.image.BufferStrategy;
+import javax.swing.JFrame;
+import java.awt.Color;
 
 public class Game extends Canvas implements Runnable {
 
@@ -32,7 +34,7 @@ public class Game extends Canvas implements Runnable {
             return;
         }
         running = true;
-        thread = new Thread(this, "Game");
+        thread = new Thread(this, "PRRONG");
         thread.start();
     }
     
@@ -47,19 +49,43 @@ public class Game extends Canvas implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.exit(1);
     }
 
     // Runnable method
     public void run() {
+
+        // Time of check, in nano seconds
+        long lastTime = System.nanoTime();
+        long timer = System.currentTimeMillis();
+        final double ns = 1000000000.0 / 60.0;
+        double delta = 0;
+        int frames = 0;
+        int ticks = 0;
+
         while (running) {
-            tick();
+            long now = System.nanoTime();
+            delta += (now - lastTime) / ns;
+            lastTime = now;
+            while (delta >= 1) {
+                tick();
+                ticks++;
+                delta--;
+            }
             render();
+            frames++;
+
+            if (System.currentTimeMillis() - timer > 1000) {
+                timer += 1000;
+                gameframe.setTitle("PRRONG | " + "TICKS: "+ ticks + " FPS: " + frames);
+                ticks = 0;
+                frames = 0;
+            }
         }
+
+        stop();
     }
 
     public void tick() {
-    
     }
 
     public void render() {
