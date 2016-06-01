@@ -9,14 +9,18 @@ import java.awt.event.KeyListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
-public class GameController implements ActionListener, KeyListener {
+public class GameController implements KeyListener {
 
+    private boolean[] keys = new boolean[120];
+    public boolean up, down, w, s;
     public int x, y;
     
-    GameController(int xPos, int yPos) {
-        this.x = xPos;
-        this.y = yPos;
-    }
+    public void update() {
+        up = keys[KeyEvent.VK_UP];
+        down = keys[KeyEvent.VK_DOWN];
+        w = keys[KeyEvent.VK_W];
+        s = keys[KeyEvent.VK_S];
+    } 
 
     public void setX(int newX) {
         this.x = newX;
@@ -33,8 +37,11 @@ public class GameController implements ActionListener, KeyListener {
     public int getY() {
         return this.y;
     }
-    public void actionPerformed(ActionEvent e) {}
-    public void keyPressed(KeyEvent e) {}
-    public void keyReleased(KeyEvent e) {}
+    public void keyPressed(KeyEvent e) {
+        keys[e.getKeyCode()] = true;
+    }
+    public void keyReleased(KeyEvent e) {
+        keys[e.getKeyCode()] = false;
+    }
     public void keyTyped(KeyEvent e) {}
 }
