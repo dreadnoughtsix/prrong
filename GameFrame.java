@@ -16,21 +16,21 @@ public class GameFrame extends JFrame {
     public static final Toolkit tk = Toolkit.getDefaultToolkit();
     public static final Dimension screenDim = tk.getScreenSize();
 
-    private static final int WIDTH = (int) screenDim.getWidth() - 300;
-    private static final int HEIGHT = (int) screenDim.getHeight() - 200;
+    public static final int WIDTH = (int) screenDim.getWidth() - 300;
+    public static final int HEIGHT = (int) screenDim.getHeight() - 200;
     public static final Dimension gameDim = new Dimension(WIDTH, HEIGHT);
 
     GameFrame() {
         // Create main frame
-        this.setTitle("PONG");
-        this.setPreferredSize(gameDim);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setResizable(false);
-        this.pack();
+        setTitle("PRRONG");
+        setPreferredSize(gameDim);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
+        pack();
 
-        this.setLocation((screenDim.width - gameDim.width)/2,
+        setLocation((screenDim.width - gameDim.width)/2,
                 (screenDim.height - gameDim.height)/2);
-        this.setVisible(true);
-        this.getContentPane().setBackground(Color.BLACK);
+        setVisible(true);
+        getContentPane().setBackground(Color.BLACK);
     }
 }
