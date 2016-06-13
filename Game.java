@@ -4,8 +4,6 @@
  * @author dreadnoughtsix
  */
 
-import java.awt.Canvas;
-import java.awt.image.BufferStrategy;
 import javax.swing.JPanel;
 import java.awt.Color;
 
