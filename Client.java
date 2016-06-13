@@ -14,6 +14,5 @@ public class Client {
 
         Game game = new Game();
         game.gameframe.add(game);
-        game.start();
     }
 }
