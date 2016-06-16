@@ -18,6 +18,7 @@ public class Game extends JPanel {
 
     Game() {
         this.setPreferredSize(GameFrame.gameDim);
+        this.setBackground(Color.BLACK);
 
         p1 = new Paddle(1);
         p2 = new Paddle(2);
