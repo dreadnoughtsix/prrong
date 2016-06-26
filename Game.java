@@ -31,6 +31,7 @@ public class Game extends JPanel {
         ActionListener taskPerformer = new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 System.out.println("timer works");
+                repaint();
             }
         };
 
