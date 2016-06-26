@@ -5,21 +5,20 @@
  */
 
 import javax.swing.JPanel;
+import javax.swing.Timer;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.Timer;
 import java.awt.Color;
+import java.awt.Graphics;
 
 public class Game extends JPanel {
 
     private static final long serialVersionUID = 1L;
 
-    public GameFrame gameframe = new GameFrame();
-
     private Paddle p1, p2;
     private Ball ball;
     public Timer timer;
-    private int delay;
+    private int delay = 1000;
 
     Game() {
         this.setPreferredSize(GameFrame.gameDim);
@@ -36,6 +35,10 @@ public class Game extends JPanel {
         };
 
         timer = new Timer(delay, taskPerformer);
+        timer.start();
+    }
+
+    public void paintComponent(Graphics g) {
     }
 
 }
