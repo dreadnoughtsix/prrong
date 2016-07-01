@@ -11,8 +11,8 @@ public class Client {
         if (System.getProperty("os.name").equals("Linux")) {
             System.setProperty("sun.java2d.opengl", "true");
         }
+        
+        Screen screen = new Screen();
 
-        Game game = new Game();
-        game.gameframe.add(game);
     }
 }
