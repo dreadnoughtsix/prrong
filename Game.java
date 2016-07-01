@@ -21,7 +21,9 @@ public class Game extends JPanel {
     private int delay = 1000;
 
     Game() {
+        super();
         this.setPreferredSize(GameFrame.gameDim);
+        this.setOpaque(true);
         this.setBackground(Color.BLACK);
 
         p1 = new Paddle(1);
@@ -39,6 +41,10 @@ public class Game extends JPanel {
     }
 
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        p1.drawPaddle(g);
+        p2.drawPaddle(g);
+        ball.drawBall(g);
     }
 
 }
