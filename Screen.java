@@ -6,4 +6,9 @@
 
 public class Screen {
     
+    Screen() {
+        GameFrame gameframe = new GameFrame();
+        Game game = new Game();
+        gameframe.add(game);
+    }
 }
