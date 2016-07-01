@@ -6,7 +6,6 @@
 
 import javax.swing.JFrame;
 import java.awt.Dimension;
-import java.awt.Color;
 import java.awt.Toolkit;
 
 public class GameFrame extends JFrame {
@@ -31,6 +30,5 @@ public class GameFrame extends JFrame {
         setLocation((screenDim.width - gameDim.width)/2,
                 (screenDim.height - gameDim.height)/2);
         setVisible(true);
-        getContentPane().setBackground(Color.BLACK);
     }
 }
