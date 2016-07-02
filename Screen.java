@@ -7,8 +7,8 @@
 public class Screen {
     
     Screen() {
-        GameFrame gameframe = new GameFrame();
-        Game game = new Game();
-        gameframe.add(game);
+        GameFrame gameFrame = new GameFrame();
+        GamePanel gamePanel = new GamePanel();
+        gameframe.add(gamePanel);
     }
 }
