@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Game extends JPanel {
+public class GamePanel extends JPanel {
 
     private static final long serialVersionUID = 1L;
 
@@ -20,7 +20,7 @@ public class Game extends JPanel {
     public Timer timer;
     private int delay = 1000;
 
-    Game() {
+    GamePanel() {
         super();
         this.setPreferredSize(GameFrame.gameDim);
         this.setOpaque(true);
