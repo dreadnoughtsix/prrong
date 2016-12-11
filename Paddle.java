@@ -15,6 +15,7 @@ public class Paddle extends GameObject {
     Paddle(int id) {
 
         this.player = id;
+        this.y = 0;
 
         if (this.player == 1) {
             this.x = 0;
@@ -22,7 +23,6 @@ public class Paddle extends GameObject {
             this.x = GameFrame.WIDTH - PADDLE_WIDTH;
         }
 
-        this.y = 0;
     }
 
     public void drawPaddle(Graphics g) {
