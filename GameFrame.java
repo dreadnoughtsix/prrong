@@ -21,14 +21,13 @@ public class GameFrame extends JFrame {
 
     GameFrame() {
         // Create main frame
-        setTitle("PRRONG");
-        setPreferredSize(gameDim);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setResizable(false);
-        pack();
+        this.setTitle("PRRONG");
+        this.setPreferredSize(gameDim);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setResizable(false);
 
-        setLocation((screenDim.width - gameDim.width)/2,
+        this.setLocation((screenDim.width - gameDim.width)/2,
                 (screenDim.height - gameDim.height)/2);
-        setVisible(true);
+        this.setVisible(true);
     }
 }
