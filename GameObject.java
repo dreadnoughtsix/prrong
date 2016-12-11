@@ -4,11 +4,11 @@
  * @author dreadnoughtsix
  */
 
-public class GameObject {
+public abstract class GameObject {
 
     public int x, y, id;
 
-    GameObject() {
+    public GameObject() {
         this.x = this.y = 0;
     }
 
