@@ -9,6 +9,7 @@ public class Screen {
     Screen() {
         GameFrame gameFrame = new GameFrame();
         GamePanel gamePanel = new GamePanel();
+        gameFrame.pack();
         gameFrame.add(gamePanel);
     }
 }
