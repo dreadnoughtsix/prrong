@@ -8,14 +8,6 @@ public abstract class GameObject {
 
     public int x, y, id;
 
-    public GameObject() {
-        this.x = this.y = 0;
-    }
-
-    GameObject(int id) {
-        this.id = id;
-    }
-
     public void setX(int x) {
         this.x = x;
     }
