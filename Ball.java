@@ -22,6 +22,22 @@ public class Ball extends GameObject {
         this.y = (GameFrame.HEIGHT /2) - ballDim.height;
     }
 
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getX() {
+        return this.x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+    
+    public int getY(){
+        return this.y;
+    }
+
     public void drawBall(Graphics g) {
         g.setColor(Color.WHITE);
         g.fillRect(this.x, this.y, ballDim.width, ballDim.height);
