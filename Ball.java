@@ -1,5 +1,5 @@
 /**
- * @since 2016-05-04
+ * @since 2017-01-26
  * @version 1.1
  * @author dreadnoughtsix
  */
