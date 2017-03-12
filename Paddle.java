@@ -22,7 +22,22 @@ public class Paddle extends GameObject {
         } else if (this.player == 2) {
             this.x = GameFrame.WIDTH - PADDLE_WIDTH;
         }
+    }
 
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getX() {
+        return this.x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getY() {
+        return this.y;
     }
 
     public void drawPaddle(Graphics g) {
