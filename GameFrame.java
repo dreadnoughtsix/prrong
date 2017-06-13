@@ -15,8 +15,8 @@ public class GameFrame extends JFrame {
     public static final Toolkit tk = Toolkit.getDefaultToolkit();
     public static final Dimension screenDim = tk.getScreenSize();
 
-    public static final int WIDTH = (int) screenDim.getWidth() - 300;
-    public static final int HEIGHT = (int) screenDim.getHeight() - 200;
+    public static final int WIDTH = 500;
+    public static final int HEIGHT = 500;
     public static final Dimension gameDim = new Dimension(WIDTH, HEIGHT);
 
     GameFrame() {
