@@ -18,9 +18,9 @@ public class Paddle extends GameObject {
         this.y = 0;
 
         if (this.player == 1) {
-            this.x = 0;
+            this.x = 5;
         } else if (this.player == 2) {
-            this.x = GameFrame.WIDTH - PADDLE_WIDTH;
+            this.x = GameFrame.WIDTH - PADDLE_WIDTH - 5;
         }
     }
 
