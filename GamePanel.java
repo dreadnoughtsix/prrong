@@ -6,8 +6,6 @@
 
 import javax.swing.JPanel;
 import javax.swing.Timer;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -30,14 +28,14 @@ public class GamePanel extends JPanel {
         p2 = new Paddle(2);
         ball = new Ball();
 
-        ActionListener taskPerformer = new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                repaint();
-            }
-        };
+        GameController gc = new GameController();
+        addKeyListener(gc);
+        setFocusable(true);
 
-        timer = new Timer(delay, taskPerformer);
+
+        timer = new Timer(delay, gc);
         timer.start();
+        repaint();
     }
 
     public void paintComponent(Graphics g) {
